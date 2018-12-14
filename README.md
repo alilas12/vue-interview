@@ -40,7 +40,7 @@ npm run serve
 - Move the `div` with the class `item-creator` to a seperate component called `ItemCreator`. The functionality should still work, while the `Item` components are still a direct child of the `App` component.
 - Use `SASS` or `LESS` for the styles in stead of `CSS`.
 - The input field should as wide as the remaining width next to the button.
-- Every second `Item` element should have a darken background color `#e0e0e0`.
+- Every second `Item` element should have a darker background color `#e0e0e0`.
 
 **Would**
 - Works in IE11 without bugs.
