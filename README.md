@@ -21,18 +21,19 @@ npm run serve
 - The text `menu` should be vertically centered within the menu bar.
 - The menu bar should stay at the top, even if the user scrolls down.
 - The menubar should have a drop shaddow.
-- The the input field should have a blue drop shaddow if it's focussed.
+- The input field should have a blue drop shadow if it's focussed.
 - The `Add` button should be green.
 
 
 **Should**
 - If you click `Add`, there will be a item appended to the list with the content of the input.
 - Disable the `Add` button if the input is empty.
-- If you press `Enter` while the input is focussed. The same behaviour will be executed as the `Add` button.
+- If you press `Enter` while the input is focussed, the same behaviour will be executed as the `Add` button.
 - There should be a `Remove` button in every `Item` (on the right).
 - The `Remove` button should be red.
 - If you click `Remove`, the corresponding item should disappear from the list.
-
+- The footer should have a minimal height of `10rem`.
+- The footer should contain a copyright symbol. 
 
 **Could**
 - Works in IE11 with only possible visual bugs.
@@ -44,3 +45,8 @@ npm run serve
 **Would**
 - Works in IE11 without bugs.
 - If you refresh the page, the content is still the same. **Including the items you added!**
+- The footer should stick to the bottom if the content is smaller then the viewport.
+
+**Extra mile**
+- If you `Add` a new to do list `Item`. The content must be encrypted using the `sha-256` algorithm.
+- If you click a to do list `Item`. Show a popup with the decrypted content.
