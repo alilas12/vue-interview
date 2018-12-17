@@ -20,7 +20,7 @@ npm run serve
 - The text within the menubar should say `To Do List` instead of `menu`.
 - The text `menu` should be vertically centered within the menu bar.
 - The menu bar should stay at the top, even if the user scrolls down.
-- The menubar should have a drop shaddow.
+- The menubar should have a drop shadow.
 - The input field should have a blue drop shadow if it's focussed.
 - The `Add` button should be green.
 
