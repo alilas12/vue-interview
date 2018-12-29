@@ -58,18 +58,18 @@ Screen resolutions what will be tested are:
 - **Desktop:** 1920x1080
 
 Deliveries:
-- Vue project (Internship requirements)
-- Nuxt project (Junior Front End Developer requirements)
+- **Vue project** (Internship requirements)
+- **Nuxt project** (Junior Front End Developer requirements)
 
 **Must**
-- Complete everything of the Internship requirements above (using Bootstrap).
+- Complete everything of the Internship requirements above (using [Bootstrap v4.1](https://getbootstrap.com/)).
 - Create a [Nuxt.js](https://nuxtjs.org/guide) project, here you will be working in from now.
 - Move everything from the `Vue` to the `Nuxt` project.
 - The menubar should have a linear gradient, choose whatever colors and direction you like.
 
 **Should**
-- Move all requirements to a uxt.js project.
 - Replace all bootstrap components with [Bootstrap-vue](bootstrap-vue.js.org) components
+- If you click on a `To Do List Item` you should go to a different page. Containing the decrypted content of that Item.
 
 **Could**
 - Move the `To Do List` data to a [Vuex store](https://vuex.vuejs.org/guide/).
