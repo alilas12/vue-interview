@@ -50,3 +50,26 @@ npm run serve
 **Extra mile**
 - If you `Add` a new to do list `Item`. The content must be encrypted using the `sha-256` algorithm.
 - If you click a to do list `Item`. Show a popup with the decrypted content.
+
+## Junior Front End Developer
+Screen resolutions what will be tested are:
+- **Mobile:** 320x500, 360x640, 412x700
+- **Tablet:** 1024x768, 768x1024
+- **Desktop:** 1920x1080
+
+Deliveries:
+- Vue project (Internship requirements)
+- Nuxt project (Junior Front End Developer requirements)
+
+**Must**
+- Complete everything of the Internship requirements above (using Bootstrap).
+- Create a [Nuxt.js](https://nuxtjs.org/guide) project, here you will be working in from now.
+- Move everything from the `Vue` to the `Nuxt` project.
+- The menubar should have a linear gradient, choose whatever colors and direction you like.
+
+**Should**
+- Move all requirements to a uxt.js project.
+- Replace all bootstrap components with [Bootstrap-vue](bootstrap-vue.js.org) components
+
+**Could**
+- Move the `To Do List` data to a [Vuex store](https://vuex.vuejs.org/guide/).
