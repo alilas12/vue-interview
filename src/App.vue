@@ -1,65 +1,85 @@
 <template>
-  <div id="app">
-    <Menu></Menu>
+  <b-container fluid class="text-center vh-100">
+    <b-row class="h-10">
+      <Menu></Menu>
+    </b-row>
+
+    <b-row class="d-flex justify-content-center h-10">
+      <ItemCreator :input="input" :items="items"></ItemCreator>
+    </b-row>
+
+    <b-row v-b-scrollspy:nav-scroller>
+      <Item :class="{'color': index % 2 }" v-for="(item, index) in items" :key="index">
+        <b-col v-b-modal.itemModal cols="8" class="float-left">
+          <span class="text-break">{{item}}</span>
+        </b-col>
+        <b-col cols="4" class="float-left w-100">
+          <b-button @click="deleteItem(index)" variant="danger" class="float-right">Delete</b-button>
+        </b-col>
+      </Item>
+    </b-row>
+
+    <b-row>
+      <Footer></Footer>
+    </b-row>
+
+    <b-modal id="itemModal">
+      <p></p>
+    </b-modal>
     
-    <div class="item-creator">
-      <input type="text">
-      <button>
-        Add
-      </button>
-    </div>
-
-    <Item v-for="item in items" :key="item">{{item}}</Item>
-
-    <Footer></Footer>
-  </div>
+  </b-container>
 </template>
 
 <script>
 import Menu from './components/Menu';
 import Item from './components/Item';
 import Footer from './components/Footer';
+import ItemCreator from './components/ItemCreator';
 
 export default {
   name: 'app',
   components: {
     Menu,
     Item,
-    Footer
+    Footer,
+    ItemCreator
   },
 
   data() {
     return {
-      items: [
-        'Wash car', 
-        'Do groceries', 
-        'Finish this assignment'
-      ]
+      input: '',
+      items: [],
     }
-  }
+  },
+
+  mounted() {
+    if(localStorage.items){
+      this.items = JSON.parse(localStorage.items);
+    }
+  },
+
+  watch:{
+    items(oldItems) {
+      localStorage.items = JSON.stringify(oldItems);
+    }
+  },
+
+  methods: {
+    deleteItem(index) {
+      this.items.splice(index, 1);
+    },
+    handleScroll () {
+      this.scrolled = window.scrollY > 0;
+    },
+  },
 }
 </script>
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-#app {
-
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#app .item-creator {
-  height: 4rem;
-  line-height: 4rem;
-}
+<style lang="scss">
+  .color{
+    background-color: #e0e0e0;
+  }
+  .h-10{
+    height: 10%;
+  }
 </style>
